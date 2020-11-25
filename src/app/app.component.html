@@ -1,0 +1,13 @@
+<virtual-scroll class="virtual-scroll"
+                [items]="imageIdList"
+                [childWidth]="50"
+                [childHeight]="50"
+                (update)="viewPortItems = $event"
+>
+  <app-thumbnail class="dummy"
+                *ngFor="let itemId of viewPortItems;"
+                [width]="50"
+                [height]="50"
+                [itemId]="itemId">
+  </app-thumbnail>
+</virtual-scroll>
